@@ -1,0 +1,21 @@
+@import url('./reset.scss');
+@import url('./variables//global.scss');
+@import url('./themes//light.scss');
+@import url('./themes//dark.scss');
+
+.app {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--bg-color);
+	color: var(--color-primary);
+	font: var(--font-m);
+}
+
+.page-wrapper {
+	display: flex;
+}
+
+.content-page {
+	flex-grow: 1;
+	padding: 20px;
+}
