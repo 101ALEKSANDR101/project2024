@@ -33,7 +33,7 @@ const Sidebar = (props: SidebarProps) => {
 	}
 
 	return (
-		<div className={classNames(cls.sidebar, mods, [className])}>
+		<div data-testid='sidebar-test' className={classNames(cls.sidebar, mods, [className])}>
 			<div className={cls.links}>
 				<AppLink to={pathsConfig.main}>
 					{<div className={cls.link}>
@@ -52,7 +52,7 @@ const Sidebar = (props: SidebarProps) => {
 				<ThemeSwitcher />
 				<LangSwitcher />
 			</div>
-			<AppButton size={AppButtonSize.L}
+			<AppButton data-testid='sidebar-btn' size={AppButtonSize.L}
 				theme={AppButtonTheme.SQUARE}
 				className={cls.btn}
 				onClick={toggleCollapse}>

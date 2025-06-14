@@ -30,7 +30,7 @@ export const AppButton = (props: AppButtonProps) => {
 	} = props;
 
 	return (
-		<button className={classNames(cls.appButton, {},
+		<button data-testid='appButton' className={classNames(cls.appButton, {},
 			[className, cls[theme], cls[size]])} {...others}>
 			{children}
 		</button>

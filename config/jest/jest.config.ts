@@ -34,6 +34,12 @@ const config: Config = {
 		"json",
 		"node"
 	],
+	setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts'],
+	modulePaths: ["<rootDir>/src"],
+	moduleNameMapper: {
+		'\\.(s?css)$': 'identity-obj-proxy',
+		'\\.svg$': '<rootDir>config/jest/jestSvgMock.tsx'
+	},
 
 	// Indicates whether the coverage information should be collected while executing the test
 	// collectCoverage: false,

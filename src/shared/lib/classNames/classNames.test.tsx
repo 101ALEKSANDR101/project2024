@@ -1,5 +1,5 @@
-import { describe, test, expect } from '@jest/globals';
 import { classNames } from './classNames';
+
 
 describe('classNames', () => {
 	test('only first param', () => {
