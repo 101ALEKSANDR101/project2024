@@ -12,6 +12,7 @@ export enum AppButtonSize {
 export enum AppButtonTheme {
 	CLEAR = 'clear',
 	SQUARE = 'square',
+	OUTLINE = 'outline',
 }
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
