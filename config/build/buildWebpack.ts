@@ -16,6 +16,12 @@ export function buildWebpack(options: BuildOptions): webpack.Configuration {
 			path: options.paths.output,
 			clean: true,
 		},
+		performance: {
+			maxAssetSize: 300000,
+			assetFilter: (asset: string) => {
+				return asset.match(options.paths.entry);
+			}
+		},
 		module: {
 			rules: buildLoaders(options),
 		},
