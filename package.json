@@ -13,7 +13,7 @@
 		"lint:scss:fix": "npx stylelint ./src/**/*.scss --fix",
 		"test:unit": "jest --config ./config/jest/jest.config.ts",
 		"storybook": "storybook dev -p 6006 --config-dir ./config/.storybook",
-		"storybook:build": "storybook build --config-dir ./config/.storybook",
+		"build-storybook": "storybook build --config-dir ./config/.storybook",
 		"chromatic": "npx chromatic --project-token=chpt_62eaddbc6a0ae48",
 		"chromatic:rebuild": "npx chromatic --project-token=chpt_62eaddbc6a0ae48 --force-rebuild"
 	},
