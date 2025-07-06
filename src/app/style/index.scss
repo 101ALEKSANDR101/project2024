@@ -3,6 +3,12 @@
 @import url('./themes//light.scss');
 @import url('./themes//dark.scss');
 
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
 .app {
 	width: 100%;
 	min-height: 100vh;

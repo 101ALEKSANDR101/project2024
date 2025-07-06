@@ -4,6 +4,7 @@ import { ThemeProvider } from 'app/providers/themeProviders/ui/ThemeProvider';
 import App from 'app/App';
 import 'shared/config/i18next/i18next';
 import { ErrorBoundary } from 'app/providers/errorBoundary';
+import './app/style/index.scss';
 
 
 const root = createRoot(document.getElementById('root'));
