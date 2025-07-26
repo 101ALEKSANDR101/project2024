@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import { LangSwitcher } from './LangSwitcher';
 
@@ -7,7 +6,6 @@ import { LangSwitcher } from './LangSwitcher';
 const meta = {
 	title: 'widgets/LangSwitcher',
 	component: LangSwitcher,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

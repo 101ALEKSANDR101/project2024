@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
@@ -7,7 +6,6 @@ import { ThemeSwitcher } from './ThemeSwitcher';
 const meta = {
 	title: 'widgets/ThemeSwitcher',
 	component: ThemeSwitcher,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

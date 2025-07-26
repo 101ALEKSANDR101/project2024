@@ -5,14 +5,14 @@ import { renderTest } from "shared/lib/tests/renderTest/renderTest";
 
 describe('Sidebar', () => {
 	test('Render', () => {
-		renderTest(<Sidebar />, ['/']);
+		renderTest(<Sidebar />, { url: ['/'] });
 
 		expect(screen.getByTestId('sidebar-test')).toBeInTheDocument();
 		screen.debug();
 	});
 
 	test('Collapsed click', () => {
-		renderTest(<Sidebar />, ['/']);
+		renderTest(<Sidebar />, { url: ['/'] });
 		const btn = screen.getByTestId('sidebar-btn');
 		fireEvent.click(btn);
 		expect(screen.getByTestId('sidebar-test')).not.toHaveClass('collapsed');

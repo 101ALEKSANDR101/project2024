@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import AboutPage from './AboutPage';
 
@@ -7,7 +6,6 @@ import AboutPage from './AboutPage';
 const meta = {
 	title: 'pages/AboutPage',
 	component: AboutPage,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

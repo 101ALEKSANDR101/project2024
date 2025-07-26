@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { AppButton, AppButtonSize, AppButtonTheme } from './AppButton';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 
 
 const meta = {
 	title: 'shared/AppButton',
 	component: AppButton,
-	decorators: [themeDecorator],
 	parameters: {
 
 	},
@@ -39,6 +37,25 @@ export const ClearSmallDark: Story = {
 	}
 };
 
+export const ClearInvertedSmall: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.CLEAR_INVERTED,
+		size: AppButtonSize.S
+	},
+};
+
+export const ClearInvertedSmallDark: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.CLEAR_INVERTED,
+		size: AppButtonSize.S
+	},
+	parameters: {
+		theme: Theme.DARK
+	}
+};
+
 export const ClearMedium: Story = {
 	args: {
 		children: 'Text',
@@ -58,6 +75,25 @@ export const ClearMediumDark: Story = {
 	}
 };
 
+export const ClearInvertedMedium: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.CLEAR_INVERTED,
+		size: AppButtonSize.M
+	},
+};
+
+export const ClearInvertedMediumDark: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.CLEAR_INVERTED,
+		size: AppButtonSize.M
+	},
+	parameters: {
+		theme: Theme.DARK
+	}
+};
+
 export const ClearLarge: Story = {
 	args: {
 		children: 'Text',
@@ -70,6 +106,25 @@ export const ClearLargeDark: Story = {
 	args: {
 		children: 'Text',
 		theme: AppButtonTheme.CLEAR,
+		size: AppButtonSize.L
+	},
+	parameters: {
+		theme: Theme.DARK
+	}
+};
+
+export const ClearInvertedLarge: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.CLEAR_INVERTED,
+		size: AppButtonSize.L
+	},
+};
+
+export const ClearInvertedLargeDark: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.CLEAR_INVERTED,
 		size: AppButtonSize.L
 	},
 	parameters: {

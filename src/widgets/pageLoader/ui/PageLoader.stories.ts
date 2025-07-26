@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import { PageLoader } from './PageLoader';
 
@@ -7,7 +6,6 @@ import { PageLoader } from './PageLoader';
 const meta = {
 	title: 'widgets/PageLoader',
 	component: PageLoader,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

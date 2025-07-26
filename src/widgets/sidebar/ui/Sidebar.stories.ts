@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import Sidebar from './Sidebar';
 
@@ -7,7 +6,6 @@ import Sidebar from './Sidebar';
 const meta = {
 	title: 'widgets/Sidebar',
 	component: Sidebar,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

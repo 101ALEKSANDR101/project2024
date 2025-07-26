@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import Navbar from './Navbar';
 
@@ -7,7 +6,6 @@ import Navbar from './Navbar';
 const meta = {
 	title: 'widgets/Navbar',
 	component: Navbar,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

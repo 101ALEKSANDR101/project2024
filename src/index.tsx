@@ -5,15 +5,18 @@ import App from 'app/App';
 import 'shared/config/i18next/i18next';
 import { ErrorBoundary } from 'app/providers/errorBoundary';
 import './app/style/index.scss';
+import { StoreProvider } from 'app/providers/store';
 
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-	<ErrorBoundary>
-		<ThemeProvider>
-			<BrowserRouter>
-				<App />
-			</BrowserRouter>
-		</ThemeProvider>
-	</ErrorBoundary>
+	<StoreProvider>
+		<ErrorBoundary>
+			<ThemeProvider>
+				<BrowserRouter>
+					<App />
+				</BrowserRouter>
+			</ThemeProvider>
+		</ErrorBoundary>
+	</StoreProvider>
 );

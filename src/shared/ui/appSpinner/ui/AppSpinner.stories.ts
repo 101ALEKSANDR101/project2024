@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import { AppSpinner } from './AppSpinner';
 
@@ -7,7 +6,6 @@ import { AppSpinner } from './AppSpinner';
 const meta = {
 	title: 'shared/AppSpinner',
 	component: AppSpinner,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},
@@ -17,11 +15,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Clear: Story = {
+export const Light: Story = {
 	args: {},
 };
 
-export const ClearDark: Story = {
+export const Dark: Story = {
 	args: {},
 	parameters: {
 		theme: Theme.DARK

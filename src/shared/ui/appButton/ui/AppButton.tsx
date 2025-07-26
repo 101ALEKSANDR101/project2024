@@ -11,6 +11,7 @@ export enum AppButtonSize {
 
 export enum AppButtonTheme {
 	CLEAR = 'clear',
+	CLEAR_INVERTED = 'clear-inverted',
 	SQUARE = 'square',
 	OUTLINE = 'outline',
 }

@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
-import { themeDecorator } from 'shared/config/story/decorators/themeDecorator';
 import { Theme } from 'app/providers/themeProviders';
 import { AppLink, AppLinkTheme } from './AppLink';
 
@@ -7,7 +6,6 @@ import { AppLink, AppLinkTheme } from './AppLink';
 const meta = {
 	title: 'shared/AppLink',
 	component: AppLink,
-	decorators: [themeDecorator],
 	parameters: {},
 	tags: ['autodocs'],
 	argTypes: {},

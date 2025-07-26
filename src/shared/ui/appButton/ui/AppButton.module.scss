@@ -6,9 +6,14 @@
 	color: var(--color-primary);
 }
 
-.clear {
+.clear,
+.clear-inverted {
 	border: none;
 	background: none;
+}
+
+.clear-inverted {
+	color: var(--inverted-color-primary);
 }
 
 .square {
