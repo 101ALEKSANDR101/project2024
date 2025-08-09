@@ -1,0 +1,15 @@
+.loginForm {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+
+.input {
+	margin-top: 10px;
+}
+
+.btn {
+	margin-top: 10px;
+	margin-left: auto;
+	color: var(--inverted-color-primary);
+}

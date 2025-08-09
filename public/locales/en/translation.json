@@ -6,5 +6,7 @@
 	"Непредвиденная ошибка": "Unexpected error",
 	"Перезагрузить страницу": "Reload page",
 	"Войти": "Login",
-	"Выйти": "Logout"
+	"Выйти": "Logout",
+	"Введите имя пользователя":"Enter username",
+	"Введите пароль":"Enter password"
 }

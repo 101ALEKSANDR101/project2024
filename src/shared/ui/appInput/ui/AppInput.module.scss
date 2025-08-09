@@ -1,0 +1,51 @@
+.appInput {
+	display: flex;
+	align-items: center;
+}
+
+.placeholder {
+	margin-right: 5px;
+	color: var(--inverted-color-primary);
+}
+
+.input {
+	border: none;
+	background: transparent;
+	outline: none;
+	width: 100%;
+	color: transparent;
+	text-shadow: 0 0 0 var(--inverted-color-primary);
+
+	:focus {
+		outline: none;
+	}
+}
+
+.caretWrapper {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.caret {
+	width: 9px;
+	height: 3px;
+	position: absolute;
+	background-color: var(--inverted-color-primary);
+	bottom: 0;
+	left: 0;
+	animation: blink infinite forwards 0.7s;
+}
+
+@keyframes blink{
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.01;
+	}
+	100% {
+		opacity: 1;
+	}
+}

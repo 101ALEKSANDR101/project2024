@@ -1,0 +1,5 @@
+import { userActions, userReducer } from './model/slice/userSlice';
+import type { UserSchema, User } from './model/types/UserSchema';
+
+
+export { UserSchema, User, userActions, userReducer }

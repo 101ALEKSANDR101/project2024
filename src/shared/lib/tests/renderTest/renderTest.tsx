@@ -9,7 +9,7 @@ import i18n from "shared/config/i18next/i18nextForTests"
 
 type RenderTestOptions = {
 	url?: string[];
-	initialState?: StateSchema;
+	initialState?: Partial<StateSchema>;
 }
 
 export function renderTest(children: ReactNode, options?: RenderTestOptions) {
@@ -17,7 +17,7 @@ export function renderTest(children: ReactNode, options?: RenderTestOptions) {
 		url,
 		initialState
 	} = options;
-	const store = createStore(initialState);
+	const store = createStore(initialState as StateSchema);
 
 	return render(
 		<Provider store={store}>
