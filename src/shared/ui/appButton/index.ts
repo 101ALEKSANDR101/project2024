@@ -1,4 +1,4 @@
-import { AppButton, AppButtonTheme } from "./ui/AppButton";
+import { AppButton, AppButtonTheme, AppButtonSize } from "./ui/AppButton";
 
 
-export { AppButton, AppButtonTheme }
+export { AppButton, AppButtonTheme, AppButtonSize }

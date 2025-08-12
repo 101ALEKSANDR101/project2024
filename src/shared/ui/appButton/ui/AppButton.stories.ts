@@ -245,3 +245,24 @@ export const OutlineLargeDark: Story = {
 		theme: Theme.DARK
 	}
 };
+
+export const OutlineLargeDisabled: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.OUTLINE,
+		size: AppButtonSize.L,
+		disabled: true,
+	},
+};
+
+export const OutlineLargeDarkDisabled: Story = {
+	args: {
+		children: 'Text',
+		theme: AppButtonTheme.OUTLINE,
+		size: AppButtonSize.L,
+		disabled: true,
+	},
+	parameters: {
+		theme: Theme.DARK
+	}
+};

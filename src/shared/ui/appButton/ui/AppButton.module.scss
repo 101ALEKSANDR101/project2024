@@ -6,6 +6,12 @@
 	color: var(--color-primary);
 }
 
+.disabled {
+	cursor: none;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
 .clear,
 .clear-inverted {
 	border: none;
@@ -28,6 +34,7 @@
 	border-radius: 15px;
 	background-color: var(--inverted-bg-color);
 	color: var(--inverted-color-primary);
+	border-color: var(--inverted-color-primary);
 }
 
 .s {
