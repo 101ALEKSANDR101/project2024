@@ -1,5 +1,7 @@
 import { AppModal } from "shared/ui/appModal";
-import { LoginForm } from "../LoginForm/LoginForm";
+import { Suspense } from "react";
+import { LoginFormLazy } from "../LoginForm/LoginForm.lazy";
+import { AppSpinner } from "shared/ui/appSpinner";
 
 
 type LoginModalProps = {
@@ -17,7 +19,9 @@ export const LoginModal = (props: LoginModalProps) => {
 
 	return (
 		<AppModal lazy onOpen={onOpen} onClose={onClose} className={className}>
-			<LoginForm />
+			<Suspense fallback={<AppSpinner />}>
+				<LoginFormLazy onSuccess={onClose} />
+			</Suspense>
 		</AppModal>
 	)
 }

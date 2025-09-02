@@ -1,5 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from './AppText.module.scss';
+import { memo } from "react";
 
 
 export enum AppTextTheme {
@@ -15,7 +16,7 @@ type AppTextProps = {
 	theme?: AppTextTheme;
 }
 
-export const AppText = (props: AppTextProps) => {
+export const AppText = memo(function AppText(props: AppTextProps) {
 	const {
 		className,
 		title,
@@ -24,7 +25,7 @@ export const AppText = (props: AppTextProps) => {
 	} = props;
 
 	const mods: Record<string, boolean> = {
-		
+
 	}
 
 	return (
@@ -33,4 +34,4 @@ export const AppText = (props: AppTextProps) => {
 			{text && <p className={cls.text}>{text}</p>}
 		</div>
 	)
-}
+});

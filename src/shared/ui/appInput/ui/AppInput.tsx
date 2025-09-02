@@ -1,4 +1,4 @@
-import { InputHTMLAttributes, useEffect, useRef, useState } from "react";
+import { InputHTMLAttributes, memo, useEffect, useRef, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from './AppInput.module.scss';
 
@@ -12,7 +12,7 @@ interface AppInputProps extends InputHTMLProps {
 	autoFocuse?: boolean;
 }
 
-export const AppInput = (props: AppInputProps) => {
+export const AppInput = memo(function AppInput(props: AppInputProps) {
 	const {
 		className,
 		value,
@@ -68,4 +68,4 @@ export const AppInput = (props: AppInputProps) => {
 			</div>
 		</div>
 	)
-}
+});

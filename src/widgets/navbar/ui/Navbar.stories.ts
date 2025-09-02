@@ -22,7 +22,7 @@ export const Light: Story = {
 export const Dark: Story = {
 	args: {},
 	parameters: {
-		theme: Theme.DARK
+		theme: Theme.DARK,
 	}
 };
 

@@ -1,54 +1,45 @@
 import cls from './Sidebar.module.scss';
 import { classNames } from "shared/lib/classNames/classNames";
-import { pathsConfig } from "shared/config/routerConfig/routerConfig";
-import { AppLink } from "shared/ui/appLink";
 import { ThemeSwitcher } from 'widgets/themeSwitcher';
 import { AppButton, AppButtonTheme } from 'shared/ui/appButton';
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import { AppButtonSize } from 'shared/ui/appButton/ui/AppButton';
-import IconMain from 'shared/assets/icons/main-20-20.svg';
-import IconAbout from 'shared/assets/icons/about-20-20.svg';
 import { LangSwitcher } from 'widgets/langSwitcher';
-import { useTranslation } from 'react-i18next';
+import { SidebarItemList } from 'widgets/sidebar/model/items';
+import { SidebarItem } from 'widgets/sidebar/sidebarItem/SidebarItem';
 
 
 type SidebarProps = {
 	className?: string;
 }
 
-const Sidebar = (props: SidebarProps) => {
+const Sidebar = memo(function Sidebar(props: SidebarProps) {
 	const {
 		className,
 	} = props;
 
 	const [collapsed, setCollapsed] = useState(true);
-	const { t } = useTranslation();
 
 	const mods: Record<string, boolean> = {
 		[cls.collapsed]: collapsed,
 	}
 
+	const [toggle, setToggle] = useState(false);
+
 	const toggleCollapse = () => {
 		setCollapsed(prev => !prev);
 	}
 
+
 	return (
 		<div data-testid='sidebar-test' className={classNames(cls.sidebar, mods, [className])}>
 			<div className={cls.links}>
-				<AppLink to={pathsConfig.main}>
-					{<div className={cls.link}>
-						<IconMain className={cls.icon} />
-						<div className={cls.text}>{t('Главная')}</div>
-					</div>}
-				</AppLink>
-				<AppLink to={pathsConfig.about}>
-					{<div className={cls.link}>
-						<IconAbout className={cls.icon} />
-						<div className={cls.text}>{t('О сайте')}</div>
-					</div>}
-				</AppLink>
+				{SidebarItemList.map((item) => (
+					<SidebarItem collapsed={collapsed} key={item.path} item={item} />
+				))}
 			</div>
 			<div className={cls.switchers}>
+				<button onClick={() => setToggle(prev => !prev)}>{toggle ? 'fuck' : 'sheet'}</button>
 				<ThemeSwitcher />
 				<LangSwitcher />
 			</div>
@@ -60,6 +51,6 @@ const Sidebar = (props: SidebarProps) => {
 			</AppButton>
 		</div>
 	)
-}
+});
 
 export default Sidebar;

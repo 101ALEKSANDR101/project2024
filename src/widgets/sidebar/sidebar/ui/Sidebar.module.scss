@@ -16,17 +16,6 @@
 	flex-direction: column;
 }
 
-.link {
-	display: flex;
-	align-items: center;
-	margin-top: var(--font-line-m);
-}
-
-.icon {
-	fill: var(--inverted-color-primary);
-	margin-right: 10px;
-}
-
 .switchers {
 	display: flex;
 	flex-direction: column;
@@ -35,10 +24,6 @@
 
 .collapsed {
 	width: var(--sidebar-width-collapsed);
-
-	.text {
-		display: none;
-	}
 }
 
 .btn {
